@@ -47,7 +47,7 @@ namespace SpotiKat.Web.Bootstrappers {
 
             new BsonClassMap().Register();
 
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
         }
     }
 }
