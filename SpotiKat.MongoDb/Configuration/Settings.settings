@@ -1,0 +1,14 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)"
+              GeneratedClassNamespace="SpotiKat.MongoDb.Configuration" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Url" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">mongodb://spotikat:D!sc0o012#@ds047217.mongolab.com:47217/appharbor_be0ab48e-82d9-44cb-994d-0b120de066c2</Value>
+    </Setting>
+    <Setting Name="DatabaseName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">appharbor_be0ab48e-82d9-44cb-994d-0b120de066c2</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

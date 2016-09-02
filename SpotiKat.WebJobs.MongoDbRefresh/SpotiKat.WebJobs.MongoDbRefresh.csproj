@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C05A39C4-61E6-4AA8-B26C-D06C24D2D44D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpotiKat.WebJobs.MongoDbRefresh</RootNamespace>
+    <AssemblyName>SpotiKat.WebJobs.MongoDbRefresh</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bootstrapper, Version=2.0.3.13, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bootstrapper.2.0.3.13\lib\Net40\Bootstrapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bootstrapper.Autofac, Version=2.0.3.13, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bootstrapper.Autofac.2.0.3.13\lib\Net40\Bootstrapper.Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CommonServiceLocator.AutofacAdapter.Unofficial, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.AutofacAdapter.Unofficial.3.5.0.0\lib\Net40\CommonServiceLocator.AutofacAdapter.Unofficial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrappers\ApplicationBootstrapper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\webjob-publish-settings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpotiKat.Boomkat\SpotiKat.Boomkat.csproj">
+      <Project>{1528ab9e-29f8-4386-84e5-0ccc6b52fb36}</Project>
+      <Name>SpotiKat.Boomkat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpotiKat.Caching.MongoDb\SpotiKat.Caching.MongoDb.csproj">
+      <Project>{838eb29e-cb85-42d5-b19a-9d799d24e519}</Project>
+      <Name>SpotiKat.Caching.MongoDb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpotiKat.Caching\SpotiKat.Caching.csproj">
+      <Project>{7a6a510b-f095-4829-8781-ca7ee264ba98}</Project>
+      <Name>SpotiKat.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpotiKat.MongoDb\SpotiKat.MongoDb.csproj">
+      <Project>{1b1d9180-c118-4612-b576-b14c9cdb7ea0}</Project>
+      <Name>SpotiKat.MongoDb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpotiKat.NewRelic\SpotiKat.NewRelic.csproj">
+      <Project>{b4e66ddd-fd4b-4d35-a7a1-dff27fba5fdd}</Project>
+      <Name>SpotiKat.NewRelic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpotiKat.Sbwr\SpotiKat.Sbwr.csproj">
+      <Project>{2dfc0e8f-19b0-4698-bf81-3b4070d9ca1d}</Project>
+      <Name>SpotiKat.Sbwr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpotiKat.Services\SpotiKat.Services.csproj">
+      <Project>{84fd6eac-ec6f-4a38-96a8-278f3c055d0b}</Project>
+      <Name>SpotiKat.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpotiKat.Spotify\SpotiKat.Spotify.csproj">
+      <Project>{848a62f1-489d-42d8-923a-fd68bf4e18b2}</Project>
+      <Name>SpotiKat.Spotify</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpotiKat\SpotiKat.csproj">
+      <Project>{0d72d0c9-37d3-4ae6-bf6e-a1b591903896}</Project>
+      <Name>SpotiKat</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\Microsoft.Web.WebJobs.Publish.1.0.7\tools\webjobs.targets" Condition="Exists('..\packages\Microsoft.Web.WebJobs.Publish.1.0.7\tools\webjobs.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

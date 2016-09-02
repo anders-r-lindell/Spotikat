@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84FD6EAC-EC6F-4A38-96A8-278F3C055D0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpotiKat.Services</RootNamespace>
+    <AssemblyName>SpotiKat.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlbumService.cs" />
+    <Compile Include="Bootstrappers\ServicesBootstrapper.cs" />
+    <Compile Include="Comparer\AlbumComparer.cs" />
+    <Compile Include="Entities\Albums.cs" />
+    <Compile Include="GenreService.cs" />
+    <Compile Include="Interfaces\IGenreService.cs" />
+    <Compile Include="Interfaces\IAlbumService.cs" />
+    <Compile Include="Interfaces\ILastAlbumService.cs" />
+    <Compile Include="Interfaces\ISpotifyAlbumService.cs" />
+    <Compile Include="Interfaces\ISpotifyService.cs" />
+    <Compile Include="LastAlbumService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpotifyAlbumService.cs" />
+    <Compile Include="SpotifyService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpotiKat.Boomkat\SpotiKat.Boomkat.csproj">
+      <Project>{1528AB9E-29F8-4386-84E5-0CCC6B52FB36}</Project>
+      <Name>SpotiKat.Boomkat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpotiKat.NewRelic\SpotiKat.NewRelic.csproj">
+      <Project>{b4e66ddd-fd4b-4d35-a7a1-dff27fba5fdd}</Project>
+      <Name>SpotiKat.NewRelic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpotiKat.Sbwr\SpotiKat.Sbwr.csproj">
+      <Project>{2dfc0e8f-19b0-4698-bf81-3b4070d9ca1d}</Project>
+      <Name>SpotiKat.Sbwr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpotiKat.Spotify\SpotiKat.Spotify.csproj">
+      <Project>{848A62F1-489D-42D8-923A-FD68BF4E18B2}</Project>
+      <Name>SpotiKat.Spotify</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpotiKat\SpotiKat.csproj">
+      <Project>{0D72D0C9-37D3-4AE6-BF6E-A1B591903896}</Project>
+      <Name>SpotiKat</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

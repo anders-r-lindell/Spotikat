@@ -1,0 +1,20 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)"
+              GeneratedClassNamespace="SpotiKat.Lastfm.Configuration" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ApiKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">f32a210878b39261834c99ba82fd9e9a</Value>
+    </Setting>
+    <Setting Name="Secret" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">4f44f07ce41e64e34751252d057da490</Value>
+    </Setting>
+    <Setting Name="ApiBaseUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://ws.audioscrobbler.com/2.0/?format=json&amp;api_key={0}&amp;method={1}</Value>
+    </Setting>
+    <Setting Name="ArtistGetSimilarMethodUrlParameter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">artist.getsimilar&amp;artist={0}&amp;limit=28</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

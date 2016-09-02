@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="SpotiKat.Web.MvcApplication" Language="C#" %>

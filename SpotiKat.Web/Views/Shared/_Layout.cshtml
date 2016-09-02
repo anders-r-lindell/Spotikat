@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SpotiKat -->
+    <title>SpotiKat - Find your independent music on Spotify</title>
+
+    <meta name="description" content="SpotiKat is an easy way to find and listen to your independent music using Boomkat and Soundsbetterwithreverb as source and Spotify as media player."/>
+    <meta property="og:title" content="SpotiKat - Find your independent music on Spotify"/>
+    <meta property="og:description" content="SpotiKat is an easy way to find and listen to your independent music using Boomkat and Soundsbetterwithreverb as source and Spotify as media player."/>
+    <meta property="og:image" content="http://www.spotikat.com/Content/Images/spotikat.gif"/>
+
+    <meta name="google-site-verification" content="V66W_dfJkWq6hblSUFaC9lmSXOFdtXdqpzhl_fuE9jY"/>
+
+    <link href="/favicon.gif" rel="shortcut icon"/>
+
+    <!-- Web Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+    @Styles.Render("~/Content/css")
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g;
+            m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-16614566-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body class="header-fixed">
+<div class="wrapper">
+    <!--=== Header ===-->
+    <div class="header">
+        <div class="container">
+            <!-- Logo -->
+            <a class="logo" href="/">
+                SpotiKat
+            </a>
+            <!-- End Logo -->
+        </div>
+        <!--/end container-->
+    </div>
+    <!--=== End Header ===-->
+    @RenderBody()
+    <div class="footer-v1">
+        <div class="footer">
+            <div class="row">
+                <!-- Latest -->
+                <div class="col-md-7 md-margin-bottom-20">
+                    <div class="posts">
+                        <div class="headline">
+                            <h2>What is SpotiKat</h2>
+                        </div>
+                        <p>SpotiKat is an easy way to find and listen to your independent music using Boomkat and Soundsbetterwithreverb as source and Spotify as media player.</p>
+                        <p>
+                            <a href="http://www.spotify.com" target="_blank">spotify.com</a> <span>/</span> <a href="http://boomkat.com" target="_blank">boomkat.com</a> <span>/</span> <a href="http://www.soundsbetterwithreverb.com" target="_blank">soundsbetterwithreverb.com</a>
+                        </p>
+                    </div>
+                </div><!--/col-md-3-->
+                <!-- End Latest -->
+                <!-- Address -->
+                <div class="col-md-5 md-margin-bottom-20">
+                    <div class="headline">
+                        <h2>Support us</h2>
+                    </div>
+                    <div class="support-us">
+                        <div class="xfb-like">
+                            <fb:like href="http://www.facebook.com/pages/SpotiKat-Find-your-Boomkat-music-on-Spotify/119946464717317" show_faces="false" width="222" font="arial" colorscheme="light"></fb:like>
+                        </div>
+                        <div class="tweet-button">
+                            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.spotikat.com" data-text="SpotiKat - Find your independent music on Spotify" data-count="horizontal">Tweet</a>
+                            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"> </script>
+                        </div>
+                        <div class="plusone-button">
+                            <g:plusone size="medium" count="true" href="http://www.spotikat.com"></g:plusone>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/col-md-3-->
+            <!-- End Address -->
+        </div>
+    </div><!--/footer-->
+</div>
+<script src="https://fb.me/react-0.14.0.min.js"></script>
+<script src="https://fb.me/react-dom-0.14.0.min.js"></script>
+@Scripts.Render("~/Scripts/js")
+<script src="/assets/js/Message.jsx"></script>
+<script src="/assets/js/Albums.jsx"></script>
+<script src="/assets/js/TopPagination.jsx"></script>
+<script src="/assets/js/BottomPagination.jsx"></script>
+<script src="/assets/js/Genres.jsx"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<!--[if lt IE 9]>
+    <script src="/assets/plugins/respond.js"></script>
+    <script src="/assets/plugins/html5shiv.js"></script>
+    <script src="/assets/plugins/placeholder-IE-fixes.js"></script>
+<![endif]-->
+</body>
+</html>

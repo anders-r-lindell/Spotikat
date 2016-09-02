@@ -1,0 +1,10 @@
+[Bb]in
+[Oo]bj
+App_Data
+*.suo
+*.user
+*/temp/*
+*.ncrunchsolution
+*.ncrunchproject
+*_ReSharper.SpotiKat*
+*_NCrunch_SpotiKat*
