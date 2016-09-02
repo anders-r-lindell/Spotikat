@@ -2,7 +2,5 @@ language: csharp
 solution: SpotiKat.sln
 deploy:
   provider: azure_web_apps
-  username: dpl
-  password: tullythebest12#
-  site: spotikat
   verbose: true
+  on: master
