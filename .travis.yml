@@ -5,3 +5,4 @@ deploy:
   username: anders.lindell@makingwaves.no
   password: tullythebest12#
   site: spotikat
+  verbose: true
