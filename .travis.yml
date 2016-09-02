@@ -1,2 +1,7 @@
 language: csharp
 solution: SpotiKat.sln
+deploy:
+  provider: azure_web_apps
+  username: anders.lindell@makingwaves.no
+  password: tullythebest12#
+  site: spotikat
